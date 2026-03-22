@@ -14,27 +14,24 @@ Hibernate JPA – Object-Relational Mapping (ORM) framework.
 MySQL – Relational database for storing customers, products, and orders.
 Maven – Project management and dependency handling.
 Project Structure
-online-shopping-system/
-│
-├─ src/main/java/com/shopping/
-│   ├─ entity/        # JPA entities: Customer, Product, OrderEntity
-│   ├─ service/       # ShoppingService.java (business logic)
-│   └─ main/          # MainApp.java (menu-driven application)
-│
-├─ pom.xml            # Maven configuration
-└─ README.md          # Project documentation
+<img width="553" height="193" alt="image" src="https://github.com/user-attachments/assets/cfb7e64c-ab11-407c-8408-c5e572f0aa86" />
+
+
 Setup Instructions
 1. Clone or Download Project
 git clone <your-repo-url>
 cd online-shopping-system
-2. Configure Database
+
+3. Configure Database
 Create a MySQL database named shopping_db.
 Update persistence.xml with your database username and password:
+
 <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/shopping_db"/>
 <property name="jakarta.persistence.jdbc.user" value="root"/>
 <property name="jakarta.persistence.jdbc.password" value="your_password"/>
 <property name="hibernate.hbm2ddl.auto" value="update"/>
-3. Add Sample Data
+
+5. Add Sample Data
 Run the addSampleData() method in ShoppingService via MainApp:
 ShoppingService service = new ShoppingService();
 service.addSampleData();
@@ -42,7 +39,8 @@ Or insert manually using SQL:
 INSERT INTO Customer (name) VALUES ('John');
 INSERT INTO Product (name, price) VALUES ('Laptop', 50000);
 INSERT INTO Product (name, price) VALUES ('Mobile', 20000);
-4. Run the Application
+
+7. Run the Application
 mvn compile exec:java -Dexec.mainClass=com.shopping.main.MainApp
 Follow the menu to place orders and view orders.
 Usage Example
@@ -68,6 +66,7 @@ Total: 70000.0
 Entity Relationship
 Customer → One-to-Many → OrderEntity
 OrderEntity → Many-to-Many → Product
+
 Notes
 Make sure product and customer IDs exist before placing an order to avoid errors.
 Hibernate auto-generates IDs using AUTO_INCREMENT in MySQL.

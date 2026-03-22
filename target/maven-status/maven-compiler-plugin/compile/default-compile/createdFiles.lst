@@ -1,0 +1,5 @@
+com\shopping\entity\Product.class
+com\shopping\main\MainApp.class
+com\shopping\entity\Customer.class
+com\shopping\service\ShoppingService.class
+com\shopping\entity\OrderEntity.class

@@ -38,8 +38,7 @@ Update persistence.xml with your database username and password:
 Run the addSampleData() method in ShoppingService via MainApp:
 ShoppingService service = new ShoppingService();
 service.addSampleData();
-This will insert sample customers and products into the database.
-Alternatively, insert manually using SQL:
+Or insert manually using SQL:
 INSERT INTO Customer (name) VALUES ('John');
 INSERT INTO Product (name, price) VALUES ('Laptop', 50000);
 INSERT INTO Product (name, price) VALUES ('Mobile', 20000);
